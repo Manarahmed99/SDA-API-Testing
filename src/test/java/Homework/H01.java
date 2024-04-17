@@ -27,7 +27,7 @@ public class H01{
 
         String url = " https://reqres.in/api/users/3";
         Response response = given().get(url);
-//        response.prettyPrint();
+        // response.prettyPrint();
 
 
         response.then()
