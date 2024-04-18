@@ -1,15 +1,16 @@
 package Homework;
 
+import base_urls.ReqresBaseUrl;
 import io.restassured.RestAssured;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
-import static org.hamcrest.Matchers.equalTo;
-import static org.hamcrest.Matchers.hasItem;
+import static org.hamcrest.Matchers.*;
+import static org.hamcrest.Matchers.hasItems;
 
-public class H02 {
+public class H02 extends ReqresBaseUrl {
 
     /*
        Given
@@ -31,12 +32,22 @@ public class H02 {
     */
 
     @Test
-    public void testUser2() {
+    public void User2Test() {
 
-        String url = "https://reqres.in/api/users/2";
-        Response response = given().get(url);
-       //response.prettyPrint();
+//        String url = "https://reqres.in/api/users/2";
+//        Response response = given().get(url);
+//       //response.prettyPrint();
 
+        //Set the Url
+        spec.pathParams("first", "users", "second", "2");
+
+        //Set the expected data
+
+        //Send the request and get the response
+        Response response = given(spec).get("{first}/{second}");
+        response.prettyPrint();
+
+        //Do assertion
         response
                 .then()
                 .statusCode(200)

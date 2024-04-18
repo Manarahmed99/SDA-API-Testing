@@ -1,12 +1,13 @@
 package Homework;
 
+import base_urls.ReqresBaseUrl;
 import io.restassured.http.ContentType;
 import io.restassured.response.Response;
 import org.testng.annotations.Test;
 
 import static io.restassured.RestAssured.given;
 
-public class H01{
+public class H01 extends ReqresBaseUrl {
 
      /*
         Given
@@ -23,13 +24,21 @@ public class H01{
 
 
     @Test
-    public void testUser3(){
-
-        String url = " https://reqres.in/api/users/3";
-        Response response = given().get(url);
+    public void User3Test(){
+        //String url = " https://reqres.in/api/users/3";
+        //  Response response = given().get(url);
         // response.prettyPrint();
 
+        //Set the Url
+        spec.pathParams("first", "users", "second", "3");
 
+        //Set the expected data
+
+        //Send the request and get the response
+        Response response = given(spec).get("{first}/{second}");
+        response.prettyPrint();
+
+        //Do assertion
         response.then()
                 .statusCode(200)
                 .contentType(ContentType.JSON)
