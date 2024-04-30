@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true"
+          name="C:/Users/manar/IdeaProjects/APIProject/src/test/java/Homework/H11petstore_user">
+        <classes>
+            <class name="Homework.H11petstore_user.H11_CreateUser"/>
+            <class name="Homework.H11petstore_user.H11_ReadUser"/>
+            <class name="Homework.H11petstore_user.H11_UpdateUser"/>
+            <class name="Homework.H11petstore_user.H11_DeleteUser"/>
+        </classes>
+    </test>
+</suite>

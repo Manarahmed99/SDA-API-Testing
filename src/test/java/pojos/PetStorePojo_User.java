@@ -3,7 +3,7 @@ package pojos;
 public class PetStorePojo_User {
 
 
-    private int id;
+    private int  id;
     private String username;
     private String firstName;
     private String lastName;
@@ -31,7 +31,7 @@ public class PetStorePojo_User {
         return id;
     }
 
-    public void setId(int id) {
+    public void setId(int  id) {
         this.id = id;
     }
 
