@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="All Test Suite">
+    <test verbose="2" preserve-order="true" name="C:/Users/manar/IdeaProjects/APIProject/src/test/java/Homework/H14">
+        <classes>
+            <class name="Homework.H14.R01_CreateContact"/>
+            <class name="Homework.H14.R02_ReadContact"/>
+            <class name="Homework.H14.R03_UpdateContact"/>
+            <class name="Homework.H14.R04_DeleteContact"/>
+        </classes>
+    </test>
+</suite>
